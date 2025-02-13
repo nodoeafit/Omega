@@ -1,0 +1,46 @@
+/* Estilos para el contenedor del medio */
+.content{
+  margin-left: 120px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 10px;
+  transition: margin-left 0.8s ease;
+}
+
+.contentOpen{
+  margin-left: 270px;
+}
+
+
+h1 {
+  margin-bottom: 20px;
+  font-family: 'Roboto Serif', serif;
+}
+p{
+  font-family: 'Roboto Serif', serif;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--bg-color-card);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  width: 45%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: var(--text-color)
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card p {
+  margin: 10px 0 0
+}

@@ -1,0 +1,93 @@
+.contentMenu{
+  position: fixed;
+  left: 0;
+  min-width: 10%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:  var(--background-color);;
+}
+
+.menuSide{
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--bg-color-card);
+  border-radius: 20px;
+  min-width: 70px;
+  width: 50%;
+}
+
+.menuCenter{
+  height: 40%;
+  width: 100%;
+}
+
+.menuTop, .menuBottom{
+  height: 20%;
+  width: 100%;
+}
+
+.childrenMenu{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.elemetMenu{
+  position: relative;
+  display: inline-block;
+  background-color: var(--background-color);
+  border-radius: 50%;
+  width: 60%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.elemetMenu::after {
+  content: attr(texto); /* Obtiene el texto del atributo texto */
+  position: absolute;
+  top:auto;
+  left: 100%;
+  min-width: 100%;
+  background-color: #f0f0f0;
+  padding: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease;
+}
+
+.elemetMenu:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.elemetMenu img{
+  position: absolute;
+  min-width: 24px;
+  width: 60%;
+  height: auto;
+}
+
+.dark{
+  display: none;
+}
+
+.darkOpen{
+  display: block;
+}
+
+.lightClose{
+  display: none;
+}
+

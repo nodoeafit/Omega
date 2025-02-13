@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+//@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+
+// Tema claro
+:root, .light-theme {
+  --background-color: #d7dadb;
+  --text-color:black;
+  --bg-color-card: #edeeee;
+  --bg-icon: #fff;
+}
+
+// Tema oscuro
+.dark-theme {
+  --background-color: #202020;
+  --text-color:white;
+  --bg-color-card: #354985;
+  --bg-icon: #222936;
+}
+
+
+
+
