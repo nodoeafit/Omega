@@ -1,13 +1,38 @@
-<h1 style="color: #000000;">Get more courses!</h1>
+<h1>Get more courses!</h1>
 <hr>
 
 <div class="more-courses-header">
   <h2 class="courses-available-title">courses available</h2>
-  <button [routerLink]="['/home-student']" routerLinkActive="router-link-active" class="go-back-btn">Go back</button>
+  <button [routerLink]="['/home-student']" routerLinkActive="router-link-active" class="go-back-btn">
+    Go back
+  </button>
 </div>
 
 
-<section>
+<section #contentCards class="content-cards">
+  <div class="card-courses" *ngFor="let course of moreCourses">
+    <div class="title">
+      <div class="icon">
+        <img src="{{course.img}}" alt="">
+      </div>
+      <h3>{{ course.name }}</h3>
+    </div>
+    <p>Modality: {{ course.modality }}</p>
+    <p>{{ course.type_of_course }}</p>
+    <p>{{ course.price }}</p>
+    <div class="buttons-container">
+      <button class="details-button" (click)="showDetails(course)">Details</button>
+      <button class="buy-button">Buy Course</button>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<!-- <section>
   <ul class="courses-cards">
     <li class="courses-available" *ngFor="let course of moreCourses"
       [ngStyle]="{'background-image': 'url(' + course.bg + ')','opacity': '0.9' }">
@@ -22,11 +47,11 @@
       <h4 class="course-details">{{ course.type_of_course }}</h4>
       <h4 class="course-details">{{ course.price }}</h4>
       <div class="buttons-container">
-        <button [routerLink]="['/courses-details', course.id]" class="details-button">
+        <button [routerLink]="['/home/courses-details', course.id]" class="details-button">
           Details
         </button>
         <button class="buy-button">Buy Course</button>
       </div>
     </li>
   </ul>
-</section>
+</section> -->

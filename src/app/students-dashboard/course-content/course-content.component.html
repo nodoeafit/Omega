@@ -1,19 +1,26 @@
-<h1>{{ selectedCourse?.name }}</h1>
+<div class="course-content-header">
+  <h1 *ngIf="course" class="course-title">
+    {{course.course}}
+    <h6 *ngIf="selectedContent">
+      {{selectedContent.ResourceName}}
+    </h6>
+  </h1>
+  <button [routerLink]="['/home-student']" routerLinkActive="router-link-active" class="go-back-btn">
+    Go back
+  </button>
+</div>
 <hr>
+
 
 <section class="course-content-container">
   <div class="left-column">
-    <section class="content-material">
-      <ng-container *ngIf="selectedCourse?.content">
-        <div *ngFor="let content of selectedCourse?.content">
-          <div *ngIf="content.type === selectedContent">
-            <p>{{ content?.value }}</p>
-          </div>
-        </div>
+    <section *ngIf="selectedContent">
+      <ng-container *ngIf="selectedContent">
+        <div [innerHTML]="selectedContent.Embed"></div>
       </ng-container>
     </section>
 
-    <section class="content-options">
+    <!-- <section class="content-options">
       <button class="content-options-buttons" [routerLink]="['content']">Content</button>
       <button class="content-options-buttons" [routerLink]="['learning-tools']">Learning tools</button>
       <button class="content-options-buttons" [routerLink]="['reviews']">reviews</button>
@@ -22,25 +29,34 @@
 
     <div class="content-options-display">
       <router-outlet />
-    </div>
+    </div> -->
   </div>
 
   <section class="course-content-section-sidebar">
-    <h2 class="course-content-title">Course Content</h2>
-    <div class="content-list">
-      <button (click)="toggleCourse(course)" *ngFor="let course of courseContent" (click)="selectCourse(course)"
-        class="course-title">
-        <h1>{{course.name}}</h1>
-        <img class="toggle-arrow"
-          [src]="course.isVisible ? 'assets/students-dashboard-imgs/arrow-up-outline.svg' : 'assets/students-dashboard-imgs/arrow-down-outline.svg'"
-          alt="toggle-arrow">
-      </button>
+    <h2 class="course-content-title">
+      NODO Eafit
+    </h2>
 
-      <div *ngIf="selectedCourse?.isVisible">
-        <button *ngFor="let content of selectedCourse?.content" class="sidebar-buttons"
-          (click)="showContent(content.type)">
-          {{ content.label }}
+    <div>
+      <div *ngFor="let unit of course?.content; let i = index">
+
+        <button (click)="toggleUnit(i)" class="sidebar-buttons">
+          <h1 class="unit-introduction">Unidad {{ unit.unidad }}</h1>
+          <img class="toggle-arrow"
+            [src]="visibleUnit[i] ? 'assets/students-dashboard-imgs/arrow-up-outline.svg': 'assets/students-dashboard-imgs/arrow-down-outline.svg'"
+            alt="toggle-arrow">
         </button>
+
+        <div *ngIf="visibleUnit[i]">
+          <div *ngFor="let item of unit.contenido">
+            <button (click)="showContent(item)"
+              [ngClass]="{'active-button': selectedContent?.ResourceName === item.ResourceName}"
+              class="content-options">
+              {{ item.ResourceName }}
+            </button>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>

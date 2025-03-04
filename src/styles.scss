@@ -15,28 +15,28 @@
   --bg-icon: #222936;
 }
 
-$titleFont: "inter";
+// $titleFont: "inter";
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-@mixin grow {
-  animation: grow 0.3s forwards;
-}
+// @mixin grow {
+//   animation: grow 0.3s forwards;
+// }
 
-@keyframes grow {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.1);
-  }
-}
+// @keyframes grow {
+//   from {
+//     transform: scale(1);
+//   }
+//   to {
+//     transform: scale(1.1);
+//   }
+// }
 
-html,
-body {
-  height: 100%;
-}
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
+// html,
+// body {
+//   height: 100%;
+// }
+// body {
+//   margin: 0;
+//   font-family: Roboto, "Helvetica Neue", sans-serif;
+// }

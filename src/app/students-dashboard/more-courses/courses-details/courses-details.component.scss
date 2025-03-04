@@ -1,4 +1,4 @@
-@import "../../../../styles.scss";
+// @import "../../../styles.scss";
 
 * {
   margin: 10px;
@@ -15,7 +15,7 @@
     color: #fff;
     font-weight: 600;
     margin-right: 100px;
-    padding: 10px;
+    padding: 5px;
     width: 6%;
   }
   @media screen and (max-width: 768px) {
@@ -31,7 +31,7 @@
 }
 
 h1 {
-  font-family: $titleFont;
+  // font-family: $titleFont;
   font-size: 40px;
   font-weight: bolder;
 }
@@ -51,7 +51,7 @@ h1 {
 }
 
 .course-details-img:hover {
-  @include grow();
+  // @include grow();
 }
 
 // course info
@@ -66,7 +66,7 @@ h1 {
 .course-details-info {
   display: flex;
   flex-direction: column;
-  font-family: $titleFont;
+  // font-family: $titleFont;
   font-weight: bolder;
   font-size: large;
   justify-content: flex-start;

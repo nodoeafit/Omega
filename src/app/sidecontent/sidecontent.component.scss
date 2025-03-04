@@ -1,0 +1,14 @@
+.sideContent{
+  position: fixed;
+  top: 0;
+  right: -100%; /* Inicialmente oculto fuera de la pantalla */
+  width: 100vh; /* Ajusta según tus necesidades */
+  height: 100vh;
+  background-color: lightblue; /* Solo para visualización */
+  transition: right 0.5s ease-in-out;
+  width: 40%;
+}
+
+.sideContent.openSideContent{
+  right: 0; /* Muestra el contenido */
+}

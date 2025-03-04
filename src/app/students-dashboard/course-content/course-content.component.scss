@@ -1,28 +1,52 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
+* {
+  margin: 3px;
+}
+
+.course-title {
+  font-weight: 900;
+  font-family: "Inter", sans-serif;
+  font-size: 2em;
+}
+
+// Header & button
+.course-content-header {
+  display: flex;
+  justify-content: space-between;
+
+  .go-back-btn {
+    background-color: #0076fc;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 600;
+    margin-right: 100px;
+    margin-top: 20px;
+    padding: 5px;
+    width: 6%;
+  }
+  @media screen and (max-width: 768px) {
+    .go-back-btn {
+      height: 20%;
+      width: 20%;
+    }
+  }
+  .go-back-btn:hover {
+    background-color: #ff9b00;
+    color: #fff;
+  }
+}
+
 // Container
 .course-content-container {
   display: grid;
   grid-template-columns: 2.8fr 1fr;
-  margin: 1%;
+  margin: 10px;
   gap: 10px;
   font-family: "inter";
 }
 
 // left section (Content material)
-.content-material {
-  border: 1px solid;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid;
-  height: 70vh;
-  background-image: url("/assets/students-dashboard-imgs/content-background.png.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-}
 
 .content-material h1,
 .content-material h2 {
@@ -77,51 +101,57 @@
   flex-direction: column;
   justify-content: start;
   border: 1px solid;
-  height: 100vh;
+  height: auto;
   background-color: #d7dadb;
   padding: 5px;
 }
 
-.course-title {
-  background-color: #d7dadb;
-  font-size: large;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  width: 100%;
-  cursor: pointer;
-}
-
 .toggle-arrow {
   width: 4%;
-  position: absolute;
-  right: 10px;
-  top: 35%;
 }
 
 .course-content-title {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ff8f1c;
-  color: white;
+  background-color: #040087;
+  color: #fff;
+  font-weight: bolder;
 }
 
-.content-list {
+.content-options {
+  width: 100%;
+  border: 1px solid gray;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  justify-content: flex-start;
+  font-size: large;
+  border-radius: 5px;
+}
+
+.content-options:hover {
+  background-color: #818ac4;
+  color: #fff;
+}
+
+.active-button {
+  background-color: #818ac4;
+  color: #fff;
+}
+
+.unit-introduction {
+  font-size: 1.5em;
+  font-weight: 600;
 }
 
 .sidebar-buttons {
-  background-color: #d7dadb;
+  background-color: #f3ece0;
+  display: flex;
+  justify-content: space-around;
   cursor: pointer;
   border: 1px solid;
-  padding: 15px;
-  font-size: medium;
+  border-radius: 5px;
 }
 
 .sidebar-buttons:hover {
   background-color: #e2e2e2;
-  font-weight: 600;
 }

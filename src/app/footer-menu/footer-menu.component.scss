@@ -1,0 +1,32 @@
+.footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.section{
+  width: 28%;
+}
+.section h4 {
+  text-align: center;
+}
+
+.section div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.derechos{
+  text-align: center;
+  margin-top: 5%;
+}
+
+@media (max-width: 767px){
+  .section{
+    width: 45%;
+    margin-bottom: 5%;
+  }
+}

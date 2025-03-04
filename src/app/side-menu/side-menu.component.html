@@ -1,40 +1,50 @@
-<div class="contentMenu">
+<div #openMenu class="closeMenu openButton" (click)="toggleHideMenu()">
+  <div>
+    <img class="dark" src="iconsMenu/dark/header.svg" alt="" />
+    <img class="light" src="iconsMenu/light/header.svg" alt="" />
+  </div>
+</div>
+
+<div #contentMenu class="contentMenu">
   <div #menuSide class="menuSide">
     <div class="menuTop childrenMenu">
       <div class="elemetMenu" texto="Inicio">
         <img class="dark" src="iconsMenu/dark/header.svg" alt="" />
         <img class="light" src="iconsMenu/light/header.svg" alt="" />
       </div>
+      <div (click)="toggleHideMenu()" class="elemetMenu" texto="Inicio">
+        <img class="dark" src="iconsMenu/dark/menu.svg" alt="" />
+        <img class="light" src="iconsMenu/light/menu.svg" alt="" />
+      </div>
     </div>
     <div class="menuCenter childrenMenu">
-      <div class="elemetMenu" texto="Cursos">
+      <div (click)="toggleactivateSideContent()" class="elemetMenu" texto="Cursos">
         <img class="dark" src="/iconsMenu/dark/rocket.svg" alt="" />
         <img class="light" src="/iconsMenu/light/rocket.svg" alt="" />
       </div>
       <div class="elemetMenu" texto="Blog">
-        <img class="dark"   src="/iconsMenu/dark/book.svg" alt="" />
-        <img class="light"   src="/iconsMenu/light/book.svg" alt="" />
+        <img class="dark" src="/iconsMenu/dark/book.svg" alt="" />
+        <img class="light" src="/iconsMenu/light/book.svg" alt="" />
       </div>
       <div class="elemetMenu" texto="Preguntas frecuentes">
-        <img class="dark"   src="/iconsMenu/dark/question.svg" alt="" />
-        <img class="light"   src="/iconsMenu/light/question.svg" alt="" />
+        <img class="dark" src="/iconsMenu/dark/question.svg" alt="" />
+        <img class="light" src="/iconsMenu/light/question.svg" alt="" />
       </div>
       <div class="elemetMenu" texto="Comunidad">
-        <img class="dark"   src="/iconsMenu/dark/chat.svg" alt="" />
-        <img class="light"   src="/iconsMenu/light/chat.svg" alt="" />
+        <img class="dark" src="/iconsMenu/dark/chat.svg" alt="" />
+        <img class="light" src="/iconsMenu/light/chat.svg" alt="" />
       </div>
     </div>
-      <div class="menuBottom childrenMenu">
-        <div (click)="toggleDarkMode()" class="elemetMenu" texto="Oscuro/ Claro">
-          <img class="dark"   src="/iconsMenu/dark/light.svg" alt="" />
-          <img class="light"   src="/iconsMenu/light/dark.svg" alt="" />
-        </div>
-        <div (click)="toggleActivateMondal()" class="elemetMenu" texto="Usuario">
-          <img class="dark"   src="/iconsMenu/dark/user.svg" alt="" />
-          <img class="light"   src="/iconsMenu/light/user.svg" alt="" />
-        </div>
+    <div class="menuBottom childrenMenu">
+      <div (click)="toggleDarkMode()" class="elemetMenu" texto="Oscuro/ Claro">
+        <img class="dark" src="/iconsMenu/dark/light.svg" alt="" />
+        <img class="light" src="/iconsMenu/light/dark.svg" alt="" />
       </div>
+      <div (click)="toggleActivateMondal()" class="elemetMenu" texto="Usuario">
+        <img class="dark" src="/iconsMenu/dark/user.svg" alt="" />
+        <img class="light" src="/iconsMenu/light/user.svg" alt="" />
+      </div>
+    </div>
   </div>
 </div>
 <app-modal></app-modal>
-

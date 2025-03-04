@@ -20,9 +20,9 @@ export class CourseEditorComponent {
     private route: ActivatedRoute,
     private courseService: CourseEditorService) {
     this.courses = this.courseService.getCourses();
-    
+
   }
-  
+
   selectCourse(course: Course) {
     this.selectedCourse = course;
   }
@@ -32,25 +32,25 @@ export class CourseEditorComponent {
       this.courseService.addModule(this.selectedCourse.id, "Nuevo Módulo");
     }
   }
-  drop (event: CdkDragDrop<Module[]>) { 
-    if (this.selectedCourse) { 
+  drop (event: CdkDragDrop<Module[]>) {
+    if (this.selectedCourse) {
       moveItemInArray(this.selectedCourse.modules, event.previousIndex, event.currentIndex);
       this.courseService.saveCourses();
     }
   }
   editModule(module: Module) {
-    module.isEditing = true; 
+    module.isEditing = true;
   }
-  
+
   saveModule(module: Module) {
-    module.isEditing = false; 
-    this.courseService.saveCourses(); 
+    module.isEditing = false;
+    this.courseService.saveCourses();
   }
 
   deleteModule(module: Module) {
     if (this.selectedCourse) {
       this.selectedCourse.modules = this.selectedCourse.modules.filter(m => m.id !== module.id);
-      this.courseService.saveCourses(); 
+      this.courseService.saveCourses();
     }
   }
 }

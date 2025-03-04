@@ -1,35 +1,28 @@
+import { SidecontentService } from './../../../services/servicesDesign/sidecontent.service';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
-import { switchMap } from 'rxjs';
-
-import { MoreCoursesService } from '../../../services/students-dashboard-services/more-courses.service';
 import { Courses } from '../../../interfaces/students-dashboard-interfaces/more-courses.interface';
 
 @Component({
-  selector: 'courses-details',
-  imports: [CommonModule, RouterLink],
+  selector: 'app-courses-details',
+  imports: [CommonModule],
   templateUrl: './courses-details.component.html',
   styleUrl: './courses-details.component.scss',
 })
-export class CoursesDetailsComponent {
+export class CoursesDetailsComponent implements OnInit {
   public moreCourses?: Courses;
 
-  constructor(
-    private moreCoursesService: MoreCoursesService,
-    private activatedRoute: ActivatedRoute,
-    private router: Router
-  ) {}
+  constructor(private sideContentService: SidecontentService) {}
 
   ngOnInit(): void {
-    this.activatedRoute.params
-      .pipe(switchMap(({ id }) => this.moreCoursesService.getCourseById(id)))
-      .subscribe((course) => {
-        if (!course) return this.router.navigate(['more-courses']);
-
-        this.moreCourses = course;
-        return;
-      });
+    this.sideContentService.selectedCourse$.subscribe((course) => {
+      this.moreCourses = course!;
+    });
+  }
+  // Close details modal
+  closeDetails() {
+    this.sideContentService.toggleactivateSideContent();
   }
 }

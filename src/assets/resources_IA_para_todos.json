@@ -1,0 +1,250 @@
+{
+  "course": "IA Para Todos",
+  "content": [
+    {
+      "unidad": 1,
+      "contenido": [
+        {
+          "ResourceName": "¿Qué verás en este curso?",
+          "Link": "https://view.genially.com/672d1563e666d8eefe2ab988",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Recurso introductorio] ¿Qué verás en este curso?\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/672d1563e666d8eefe2ab988\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "¿Qué verás en esta unidad?",
+          "Link": "https://view.genially.com/672d239ee1b1e55f6f36cc15",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Recurso introductorio] ¿Qué verás en esta unidad?\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/672d239ee1b1e55f6f36cc15\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "¿Qué es la IA?",
+          "Link": "https://view.genially.com/672d1ada9e275235cf341926",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Concepto 1] ¿Qué es la IA?\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/672d1ada9e275235cf341926\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "Raíces de la inteligencia artificial: el perceptrón",
+          "Link": "https://view.genially.com/672d28579e275235cf3ec69a",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Recurso complementario] Raíces de la inteligencia artificial: el perc\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/672d28579e275235cf3ec69a\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "Origen de la inteligencia artificial",
+          "Link": "https://view.genially.com/672d26ad9e275235cf3d260b",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Concepto 1] Origen de la inteligencia artificial\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/672d26ad9e275235cf3d260b\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "Historia de la Inteligencia Artificial",
+          "Link": "https://view.genially.com/672d29ce3b3c6f40082d7cc0",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Recurso complementario] Raíces de la inteligencia artificial: el perc\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/672d28579e275235cf3ec69a\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "El origen de la computación: la máquina analítica",
+          "Link": "https://view.genially.com/672d2cb21f495ead2ea606a4",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Recurso complementario] El origen de la computación: la máquina analí\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/672d2cb21f495ead2ea606a4\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "IA, IA generativa, Machine Learning y Deep Learning",
+          "Link": "https://view.genially.com/672d1c5ee1b1e55f6f314f23",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Concepto 1] IA, IA generativa, Machine Learning y Deep Learning\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/672d1c5ee1b1e55f6f314f23\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "IA en las industrias",
+          "Link": "https://view.genially.com/672d1f90aac5e9e861930d73",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Concepto 1] IA en las industrias\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/672d1f90aac5e9e861930d73\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        }
+      ]
+    },
+    {
+      "unidad": 2,
+      "contenido": [
+        {
+          "ResourceName": "¿Qué verás en esta unidad?",
+          "Link": "https://view.genially.com/672d3508e666d8eefe431807",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Recurso introductorio] ¿Qué verás en esta unidad?\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/672d3508e666d8eefe431807\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "Beneficios de la IA generativa",
+          "Link": "https://view.genially.com/672e1e0f6a8bdf8d7aa90023",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Concepto 1]  Beneficios de la IA generativa\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/672e1e0f6a8bdf8d7aa90023\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "Impacto de la IA generativa",
+          "Link": "https://view.genially.com/672e27d52f24e70b43247573",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Concepto 2] Impacto de la IA generativa\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/672e27d52f24e70b43247573\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "¿Qué es un prompt?",
+          "Link": "https://view.genially.com/672e4c1cf1245ddb857064c7",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Concepto 1] ¿Qué es un prompt?\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/672e4c1cf1245ddb857064c7\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "¿Cómo estructurar un buen prompt?",
+          "Link": "https://view.genially.com/672e54a3006e661efbc7015d",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Concepto 2] ¿Cómo estructurar un buen prompt?\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/672e54a3006e661efbc7015d\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "Aplicaciones y beneficios de los prompts",
+          "Link": "https://view.genially.com/672e51d58c4be1756bf5220b",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Concepto 3] Aplicaciones y beneficios de los prompts\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/672e51d58c4be1756bf5220b\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        }
+      ]
+    },
+    {
+      "unidad": 3,
+      "contenido": [
+        {
+          "ResourceName": "¿Qué verás en esta unidad?",
+          "Link": "https://view.genially.com/67337f1db1eada6b7b9ed25b",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Recurso introductorio] ¿Qué verás en esta unidad?\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/67337f1db1eada6b7b9ed25b\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "IA generativa de texto",
+          "Link": "https://view.genially.com/67649f51839ad667dcf729a2",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Concepto 1] IA generativa de texto\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/67649f51839ad667dcf729a2\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "Chat GPT",
+          "Link": "https://vimeo.com/1033140087/22d03df007?share=copy",
+          "Embed": "<div style=\"padding:75.00% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1033140087?h=22d03df007&badge=0&autopause=0&player_id=0&app_id=58479&dnt=1/embed\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen frameborder=\"0\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\"></iframe></div>"
+        },
+        {
+          "ResourceName": "Claude",
+          "Link": "https://vimeo.com/1033171789/211956b027?share=copy",
+          "Embed": "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1033171789?h=211956b027&badge=0&autopause=0&player_id=0&app_id=58479/embed\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen frameborder=\"0\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\"></iframe></div>"
+        },
+        {
+          "ResourceName": "Copilot",
+          "Link": "https://vimeo.com/1033197495/5501e69fba?share=copy",
+          "Embed": "<div style=\"padding:75.00% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1033197495?h=5501e69fba&badge=0&autopause=0&player_id=0&app_id=58479&dnt=1/embed\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen frameborder=\"0\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\"></iframe></div>"
+        },
+        {
+          "ResourceName": "Retos",
+          "Link": "https://view.genially.com/673385d60e5a6737f13ead7e",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Concepto 5] Retos T1\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/673385d60e5a6737f13ead7e\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "IA generativa de imagen",
+          "Link": "https://view.genially.com/6764a288839ad667dcf95c47",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Concepto 1] IA generativa de imagen\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/6764a288839ad667dcf95c47\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "Leonardo",
+          "Link": "https://vimeo.com/1033205395/68c1d1c246?share=copy",
+          "Embed": "<div style=\"padding:75.00% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1033205395?h=68c1d1c246&badge=0&autopause=0&player_id=0&app_id=58479/embed\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen frameborder=\"0\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\"></iframe></div>"
+        },
+        {
+          "ResourceName": "DALL-E 3 (Chat GPT)",
+          "Link": "https://vimeo.com/1033212537/6631a4f5d5?share=copy",
+          "Embed": "<div style=\"padding:75.00% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1033212537?h=6631a4f5d5&badge=0&autopause=0&player_id=0&app_id=58479&dnt=1/embed\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen frameborder=\"0\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\"></iframe></div>"
+        },
+        {
+          "ResourceName": "Midjourney (Chat GPT)",
+          "Link": "https://vimeo.com/1033216020/7dae844323?share=copy",
+          "Embed": "<div style=\"padding:75.00% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1033216020?h=7dae844323&badge=0&autopause=0&player_id=0&app_id=58479/embed\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen frameborder=\"0\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\"></iframe></div>"
+        },
+        {
+          "ResourceName": "Retos",
+          "Link": "https://view.genially.com/673390a404a59cc56c1f9dc1",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Concepto 5] Retos T2\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/673390a404a59cc56c1f9dc1\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "IA generativa de video",
+          "Link": "https://view.genially.com/6765974cf88ec145c12db9e0",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Concepto 1] IA generativa de video\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/6765974cf88ec145c12db9e0\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "Canva",
+          "Link": "https://vimeo.com/1033277644/f03003612e?share=copy",
+          "Embed": "<div style=\"padding:75.00% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1033277644?h=f03003612e&badge=0&autopause=0&player_id=0&app_id=58479&dnt=1/embed\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen frameborder=\"0\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\"></iframe></div>"
+        },
+        {
+          "ResourceName": "Runway",
+          "Link": "https://vimeo.com/1033231655/c6bb58617c?share=copy",
+          "Embed": "<div style=\"padding:75% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1033231655?h=c6bb58617c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"Crear videos con Runway\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"></script>"
+        },
+        {
+          "ResourceName": "Invideo AI",
+          "Link": "https://vimeo.com/1033294163/51d0c4f1f6?share=copy",
+          "Embed": "<div style=\"padding:75.00% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1033294163?h=51d0c4f1f6&badge=0&autopause=0&player_id=0&app_id=58479&dnt=1/embed\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen frameborder=\"0\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\"></iframe></div>"
+        },
+        {
+          "ResourceName": "Retos",
+          "Link": "https://view.genially.com/673398aa04a59cc56c265938",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Concepto 5] Retos T3\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/673398aa04a59cc56c265938\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "IA generativa de sonido",
+          "Link": "https://view.genially.com/676599d053faf8c77b753dab",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Concepto 1] IA generativa de sonido\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/676599d053faf8c77b753dab\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "Elevenlabs",
+          "Link": "https://vimeo.com/1033238854/769a464e2a?share=copy",
+          "Embed": "<div style=\"padding:75.00% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1033238854?h=769a464e2a&badge=0&autopause=0&player_id=0&app_id=58479/embed\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen frameborder=\"0\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\"></iframe></div>"
+        },
+        {
+          "ResourceName": "Suno AI",
+          "Link": "https://vimeo.com/1033301207/f44c4d651a?share=copy",
+          "Embed": "<div style=\"padding:75.00% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1033301207?h=f44c4d651a&badge=0&autopause=0&player_id=0&app_id=58479&dnt=1/embed\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen frameborder=\"0\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\"></iframe></div>"
+        },
+        {
+          "ResourceName": "ChatGPT voices",
+          "Link": "https://vimeo.com/1033246541/ad84685d81?share=copy",
+          "Embed": "<div style=\"padding:75.00% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1033246541?h=ad84685d81&badge=0&autopause=0&player_id=0&app_id=58479/embed\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen frameborder=\"0\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\"></iframe></div>"
+        },
+        {
+          "ResourceName": "Retos",
+          "Link": "https://view.genially.com/6733a01836df03ef548c67b5",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Concepto 16] Retos T4\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/6733a01836df03ef548c67b5\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "¿Qué es una API de IA generativa?",
+          "Link": "https://view.genially.com/6733aa7f04a59cc56c359c11",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Concepto 1] ¿Qué es una API de IA generativa?\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/6733aa7f04a59cc56c359c11\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "Conoce qué es una API",
+          "Link": "https://vimeo.com/1033310860/0bf052a128?share=copy",
+          "Embed": "<div style=\"padding:75.00% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1033310860?h=0bf052a128&badge=0&autopause=0&player_id=0&app_id=58479&dnt=1/embed\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen frameborder=\"0\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\"></iframe></div>"
+        },
+        {
+          "ResourceName": "[Concepto]\nContinúa con tu aprendizaje",
+          "Link": "https://vimeo.com/1033314161/e90c8f4fac?share=copy",
+          "Embed": "<div style=\"padding:56.25% 0 0 0;position:relative;\"><iframe src=\"https://player.vimeo.com/video/1033314161?h=e90c8f4fac&badge=0&autopause=0&player_id=0&app_id=58479&dnt=1/embed\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen frameborder=\"0\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\"></iframe></div>"
+        }
+      ]
+    },
+    {
+      "unidad": 4,
+      "contenido": [
+        {
+          "ResourceName": "¿Qué verás en esta unidad?",
+          "Link": "https://view.genially.com/672e69e63ae9ab9a68e44573",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Recurso introductorio] ¿Qué verás en esta unidad?\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/672e69e63ae9ab9a68e44573\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "Problemas éticos en la IA",
+          "Link": "https://view.genially.com/672e6b9c006e661efbd956fb",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Concepto 1] Problemas éticos en la IA\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/672e6b9c006e661efbd956fb\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "IA y sus debates éticos",
+          "Link": "https://view.genially.com/673356fcb1eada6b7b7ca8e7",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Concepto 2] IA y sus debates éticos\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/673356fcb1eada6b7b7ca8e7\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        },
+        {
+          "ResourceName": "Desafíos en el uso de la IA",
+          "Link": "https://view.genially.com/67335bd616215d6f870931ae",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"[Concepto 3] Desafíos en el uso de la IA\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/67335bd616215d6f870931ae\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        }
+      ]
+    },
+    {
+      "unidad": 5,
+      "contenido": [
+        {
+          "ResourceName": "Conceptos claves de ML, DL, redes neuronales y NLP",
+          "Link": "https://view.genially.com/67648d3444089192193c5ab9",
+          "Embed": "<div style=\"width: 100%;\"><div style=\"position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;\"><iframe title=\"Recurso unificado\" frameborder=\"0\" width=\"1920\" height=\"1080\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://view.genially.com/67648d3444089192193c5ab9\" type=\"text/html\" allowscriptaccess=\"always\" allowfullscreen=\"true\" scrolling=\"yes\" allownetworking=\"all\"></iframe> </div> </div>"
+        }
+      ]
+    }
+  ]
+}

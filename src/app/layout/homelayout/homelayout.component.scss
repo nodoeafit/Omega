@@ -1,0 +1,14 @@
+.content{
+  margin-left: 10%;
+  transition: margin-left 0.5s ease-in-out;
+  margin-right: 0;
+  transition: margin-right 0.5s ease-in-out;
+}
+
+.content.content0{
+  margin-left: 5%;
+}
+
+.content.openSideContent{
+  margin-right: 40%;
+}

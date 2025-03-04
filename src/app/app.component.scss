@@ -4,3 +4,97 @@ body{
   color: var(--text-color);
 }
 
+h1{
+  font-size: 3vw;
+}
+h2{
+  font-size: 2.5vw;
+}
+h3{
+  font-size: 2vw;
+}
+
+h4{
+  font-size: 1.5vw;
+}
+h5{
+  font-size: 1.3vw;
+}
+h6{
+  font-size: 1.2vw;
+}
+
+p{
+  font-size: 1.2vw;
+}
+
+a{
+  font-size: 1.2vw;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+button{
+  font-size: 1.2vw;;
+}
+
+@media (max-width: 767px){
+  h1{
+    font-size: 4vw;
+  }
+  h2{
+    font-size: 3vw;
+  }
+  h3{
+    font-size: 3vw;
+  }
+  h4{
+    font-size: 2.5vw;
+  }
+  h5{
+    font-size: 2vw;
+  }
+  h6{
+    font-size: 1.8vw;
+  }
+  p{
+    font-size: 1.8vw;
+  }
+  a{
+    font-size: 1.8vw;
+  }
+  button{
+    font-size: 1.8vw;
+  }
+}
+
+@media (max-width: 480px){
+  h1{
+    font-size: 5vw;
+  }
+  h2{
+    font-size: 4vw;
+  }
+  h3{
+    font-size: 3.5vw;
+  }
+  h4{
+    font-size: 3vw;
+  }
+  h5{
+    font-size: 2.5vw;
+  }
+  h6{
+    font-size: 2vw;
+  }
+
+  p{
+    font-size: 2.5vw;
+  }
+  a{
+    font-size: 2.5vw;
+  }
+  button{
+    font-size: 2.5vw;
+  }
+}
