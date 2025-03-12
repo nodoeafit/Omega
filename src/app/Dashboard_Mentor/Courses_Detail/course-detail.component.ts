@@ -15,42 +15,38 @@ import { CourseDetailService } from '../../services/course_detail.service';
 export class CourseDetailComponent implements OnInit {
 
   NombreCurso: any;
-  Completado: any; 
+  Completado: any;
   Estudiante: any;
   modalOpen: boolean = false;
   ModalOpenNotas: boolean = false;
   selectedStudent: any = null;
 
 
-  constructor (
+  constructor(
     private route: ActivatedRoute,
     private courseDetailService: CourseDetailService
-  ) {}
+  ) { }
 
-  ngOnInit() {
-    this.route.params.subscribe({
-      next: (params) => {
-        const mentorId = Number(params['mentorId']);
-        const courseId = Number(params['id']);
-      
-        if (!isNaN(mentorId) && !isNaN(courseId)) {
-          this.courseDetailService.obtenerDetallesCurso(mentorId, courseId).subscribe({
-            next: data => {
-              this.NombreCurso = data.curso.nombre;
-              this.Completado = data.curso.completado
-              this.Estudiante = data.curso.estudiantes;
-            },
-            error: error => {
-              console.error("Error al obtener los detalles del curso:", error);
-            }
-          });
-      },
-      error: (error) => {
-        console.error('Error al obtener los parámetros de la ruta:', error);
-      },
+  ngOnInit(): void {
+    this.route.params.subscribe((params) => {
+      const mentorId = Number(params['mentorId']);
+      const courseId = Number(params['id']);
+
+      if (!isNaN(mentorId) && !isNaN(courseId)) {
+        this.courseDetailService.obtenerDetallesCurso(mentorId, courseId).subscribe({
+          next: (data) => {
+            this.NombreCurso = data.curso.nombre;
+            this.Completado = data.curso.completado;
+            this.Estudiante = data.curso.estudiantes;
+          },
+          error: (err: Error) => {
+            console.error("Error al obtener los detalles del curso:", err);
+          }
+        });
+      }
     });
   }
- 
+
   calcularNotaFinal(estudiante: any): number {
     const notas = estudiante.notas;
     if (!notas || notas.length === 0) return 0;
@@ -58,7 +54,7 @@ export class CourseDetailComponent implements OnInit {
     let total = 0;
     let totalPorcentaje = 0;
 
-    notas.forEach((nota:any) => {
+    notas.forEach((nota: any) => {
       total += nota.calificacion * (nota.porcentaje / 100);
       totalPorcentaje += nota.porcentaje;
     });
@@ -79,12 +75,12 @@ export class CourseDetailComponent implements OnInit {
     this.selectedStudent = JSON.parse(JSON.stringify(estudiante));
     this.ModalOpenNotas = true;
   }
-  
+
   openModal() {
     this.modalOpen = true;
     this.ModalOpenNotas = true;
   }
-  
+
   closeModal() {
     this.modalOpen = false;
     this.ModalOpenNotas = false;
@@ -101,5 +97,5 @@ export class CourseDetailComponent implements OnInit {
     }
   }
 
-  
+
 }
