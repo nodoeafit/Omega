@@ -16,6 +16,37 @@
     text-align: center;
 }
 
+#welcome {
+  background-image: url("/assets/images/welcome-background.png"); // Ajusta la ruta según tu estructura de carpetas
+  background-size: cover; // Cubre todo el contenedor
+  background-position: center; // Centra la imagen
+  background-repeat: no-repeat; // Evita que la imagen se repita
+
+  width: 94%; // Ocupa todo el ancho
+  min-height: 100vh; // Ocupa al menos el alto de la ventana visible
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; // Si quieres texto encima, asegúrate de que sea visible
+
+  
+}
+
+#welcome.h2{
+  font-size: 2.5em;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.text{
+  background-color: rgba(128, 128, 128, 0.8);
+  padding: 20px 20px 20px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 80%;
+  text-align: center;
+}
+
 .benefits, .testimonials {
     display: flex;
     justify-content: space-around;

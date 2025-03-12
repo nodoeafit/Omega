@@ -2,20 +2,31 @@
     <div class="login-box">
       <h2>!Hola!</h2>
       <p>Bienvenido/a de nuevo</p>
-      <form>
+      <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
         <input
           type="email"
           placeholder="Ingresa tu correo."
           required
+          [(ngModel)]="email"
+          name="email"
         />
-        <input type="password" placeholder="Contraseña" required />
+        <input 
+          type="password" 
+          placeholder="Contraseña" 
+          required
+          [(ngModel)]="password"
+          name="password" 
+        />
         <div class="forgot-password">
           <a href="#">¿Olvidaste tu contraseña?</a>
         </div>
-        <button type="submit">Ingresar</button>
+        <div *ngIf="errorMessage" class="error-message">
+          {{ errorMessage }}
+        </div>
+        <button type="submit" [disabled]="!loginForm.form.valid">Ingresar</button>
       </form>
-<div class="signup-link-group">
-      <p class="signup">¿Deseas registrarte?</p>
+      <div class="signup-link-group">
+        <p class="signup">¿Deseas registrarte?</p>
         <a routerLink="/signup" routerLinkActive="active">¡Regístrate ahora!</a>
       </div>
     </div>

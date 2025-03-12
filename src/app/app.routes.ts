@@ -12,16 +12,14 @@ import { HomelayoutComponent } from './layout/homelayout/homelayout.component';
 import { MainLayoutComponent } from './Pages/main-layout/main-layout.component';
 
 import { CourseContentComponent } from './students-dashboard/course-content/course-content.component';
-
-import { ContainerComponent } from './admin-components/container/container.component';
-import { UserFormComponent } from './admin-components/user-form/user-form.component';
-import { SearchUserDashboardComponent } from './search-user-dashboard/search-user-dashboard.component';
+import path from 'path';
+import { UserCardComponent } from './admin-components/user-card/user-card.component';
 import { AdminComponent } from './admin-dashboard/admin-dashboard.component';
-import { UserDetailComponent } from './admin-components/user-detail/user-detail.component.js';
-import { EditUserComponent } from './admin-components/edit-user/edit-user.component.js';
+import { UserFormComponent } from './admin-components/user-form/user-form.component';
+import { UserDetailComponent } from './admin-components/user-detail/user-detail.component';
+import { EditUserComponent } from './admin-components/edit-user/edit-user.component';
 import { AdminGroupComponentComponent } from './admin-group-component/admin-group-component.component';
-import { GroupDetailsComponent } from './admin-group-component/group-details/group-details.component.js';
-
+import { GroupDetailsComponent } from './admin-group-component/group-details/group-details.component';
 export const routes: Routes = [
   //RUTAS LANDING OK
   {
@@ -106,8 +104,17 @@ export const routes: Routes = [
         path: 'dashboard_mentor',
         data: { renderMode: 'client' },
         component: DashboardComponent,
+        children: [
+          {
+            path: '',
+            loadComponent: () => import('./Dashboard_Mentor/Courses_List/course-list.component').then(m => m.CourseListComponent)
+          },
+          {
+            path: ':mentorId/course/:id',
+            loadComponent: () => import('./Dashboard_Mentor/Courses_Detail/course-detail.component').then(m => m.CourseDetailComponent)
+          }
+        ]
       },
-
       //Home Student Component
       {
         path: 'home-student',
@@ -186,41 +193,77 @@ export const routes: Routes = [
             (m) => m.CommunityComponent
           ),
       },
-      {
-        path: 'admin',
-        data: { renderMode: 'client' },
-        component: AdminComponent,
-      },
-      {
-        path: 'admin/user',
-        data: { renderMode: 'client' },
-        component: SearchUserDashboardComponent,
-      },
-    
-      {
-        path: 'admin/adduser',
-        data: { renderMode: 'client' },
-        component: UserFormComponent,
-      },
-    
-      {
-        path: 'admin/user-detail/:id',
-        data: { renderMode: 'client' },
-        component: UserDetailComponent,
-      },
-    
-      {
-        path: 'admin/user-edit/:id',
-        data: { renderMode: 'client' },
-        component: EditUserComponent,
-      },
+    ],
+  },
+
+  // Default path
+  {
+    path: '',
+    data: { renderMode: 'client' },
+    redirectTo: 'landing',
+    pathMatch: 'full',
+  }, // Redirige la raíz a la landing page
+  {
+    path: 'landing',
+    data: { renderMode: 'client' },
+    component: LandingPageComponent,
+  },
+  {
+    path: 'login2',
+    data: { renderMode: 'client' },
+    component: LoginPageComponent,
+  },
+  {
+    path: 'cursos',
+    data: { renderMode: 'client' },
+    component: CoursesPageComponent,
+  },
+  {
+    path: 'signup',
+    data: { renderMode: 'client' },
+    component: SignupPageComponent,
+  },
+
+  //Admin User
+  {
+    path: '',
+    component: HomelayoutComponent,
+    children: [
+        {
+          path: 'admin',
+          data: { renderMode: 'client' },
+          component: AdminComponent,
+        },
+        {
+          path: 'admin/user',
+          data: { renderMode: 'client' },
+          component: UserCardComponent,
+        },
+
+        {
+          path: 'admin/adduser',
+          data: { renderMode: 'client' },
+          component: UserFormComponent,
+        },
+
+        {
+          path: 'admin/user-detail/:id',
+          data: { renderMode: 'client' },
+          component: UserDetailComponent,
+        },
+
+        {
+          path: 'admin/user-edit/:id',
+          data: { renderMode: 'client' },
+          component: EditUserComponent,
+        },
       {
         path: 'admin/groups',
         data: { renderMode: 'client' },
         component: AdminGroupComponentComponent,
       },
       {
-        path: 'admin/groups/id',
+        path: 'admin/groups/:id',
         data: { renderMode: 'client' },
         component: GroupDetailsComponent,
       },

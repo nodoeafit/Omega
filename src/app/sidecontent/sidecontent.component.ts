@@ -10,12 +10,13 @@ import { CourseDetailComponent } from '../Dashboard_Mentor/Courses_Detail/course
 import { CoursesDetailsComponent } from '../students-dashboard/more-courses/courses-details/courses-details.component';
 import { InfouserComponent } from '../students-dashboard/infouser/infouser.component';
 import { PruebaComponent } from '../prueba/prueba.component';
+import { UserFormComponent } from "../admin-components/user-form/user-form.component";
 
 @Component({
   selector: 'app-sidecontent',
   templateUrl: './sidecontent.component.html',
   styleUrl: './sidecontent.component.scss',
-  imports: [InfouserComponent, PruebaComponent, CoursesDetailsComponent],
+  imports: [InfouserComponent, PruebaComponent, CoursesDetailsComponent, UserFormComponent],
 })
 export class SidecontentComponent implements OnInit {
   @ViewChild('sideContent', { static: true })

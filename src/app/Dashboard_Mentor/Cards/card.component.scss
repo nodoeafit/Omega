@@ -1,19 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .course-card {
   position: relative;
-  width:300px;
-  height: 150px;
+  width: 300px;
+  height: 200px;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background: white;
   transition: transform 0.3s ease-in-out;
+  overflow: hidden;
 }
+
 .course-card h3 {
   width: 20ch;
   text-wrap: nowrap;
   overflow: hidden;
   animation: typing 3s steps(20) infinite alternate-reverse;
 }
+
 @keyframes typing {
   from {
     width: 0ch;
@@ -46,23 +55,87 @@
   text-align: center;
 }
 
-.view-course {
+.button {
   position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 15%;
-  writing-mode: vertical-rl;
-  padding: 5px 10px;
   border: none;
-  background: #4caf50;
-  color: white;
-  border-radius: 5px;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  font-size: 1rem;
+  background: transparent;
+  padding: 0;
   cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-.course-card:hover .view-course {
+.course-card:hover .button {
   opacity: 1;
+}
+
+.shadow {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.edge {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(to left,
+          hsl(246, 100%, 16%) 0%,
+          hsl(246, 100%, 32%) 8%,
+          hsl(246, 100%, 32%) 92%,
+          hsl(244, 100%, 16%) 100%);
+}
+
+.front {
+  display: block;
+  position: relative;
+  padding: 12px 42px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  color: white;
+  background: hsl(212, 100%, 47%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.button:hover {
+  filter: brightness(110%);
+}
+
+.button:hover .front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.button:hover .shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.button:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.button:active .shadow {
+  transform: translateY(-6px);
+  transition: transform 34ms;
 }

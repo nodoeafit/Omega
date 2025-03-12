@@ -16,32 +16,24 @@ export class CourseListComponent implements OnInit {
   mentorId: number = 0;
   mentor: any;
 
-  constructor(private coursesService: CoursesService) {}
+  constructor(private coursesService: CoursesService) { }
 
   ngOnInit() {
     this.mentorId = this.getMentorIdFromSession();
-    // this.coursesService.getCoursesByMentor(this.mentorId).subscribe({
-    //   next: (data) => {
-    //     this.courses = data.cursos;
-    //     this.mentor = data.mentor;
-    //   },
-    //   error: (error) => {
-    //     console.error("Error cargando los cursos del mentor:", error);
-    //   }
-    // });
-    fetch('assets/courses.json')
-      .then((res) => res.json())
-      .then((data) => {
-        const filterData = data.filter(
-          (res: { mentorId: number }) => res.mentorId == this.mentorId
-        );
-        this.mentor = filterData[0].nombre;
-        this.courses = filterData[0].cursos;
-      });
+    this.coursesService.obtenerMentorConCursos(this.mentorId).subscribe({
+      next: (data) => {
+        this.courses = data.cursos;
+        this.mentor = data.nombre;
+      },
+      error: (error) => {
+        console.error("Error cargando los cursos del mentor:", error);
+      }
+    });
   }
 
   getMentorIdFromSession(): number {
-    // Simulación de autenticación (en un futuro esto vendría del backend)
-    return 502; // ID del mentor que ha iniciado sesión
+    return 502;
   }
 }
+
+

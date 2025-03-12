@@ -16,9 +16,18 @@
             "cc": "12345678",
             "progreso": 80,
             "notas": [
-              { "calificacion": 4.5, "porcentaje": 30 },
-              { "calificacion": 4.0, "porcentaje": 40 },
-              { "calificacion": 3.8, "porcentaje": 30 }
+              {
+                "calificacion": 4.5,
+                "porcentaje": 30
+              },
+              {
+                "calificacion": 4.0,
+                "porcentaje": 40
+              },
+              {
+                "calificacion": 3.8,
+                "porcentaje": 30
+              }
             ]
           },
           {
@@ -28,9 +37,18 @@
             "cc": "87654321",
             "progreso": 70,
             "notas": [
-              { "calificacion": 4.0, "porcentaje": 30 },
-              { "calificacion": 3.5, "porcentaje": 40 },
-              { "calificacion": 3.9, "porcentaje": 30 }
+              {
+                "calificacion": 4.0,
+                "porcentaje": 30
+              },
+              {
+                "calificacion": 3.5,
+                "porcentaje": 40
+              },
+              {
+                "calificacion": 3.9,
+                "porcentaje": 30
+              }
             ]
           }
         ],
@@ -55,9 +73,207 @@
             "cc": "11223344",
             "progreso": 65,
             "notas": [
-              { "calificacion": 3.5, "porcentaje": 30 },
-              { "calificacion": 3.8, "porcentaje": 40 },
-              { "calificacion": 4.2, "porcentaje": 30 }
+              {
+                "calificacion": 3.5,
+                "porcentaje": 30
+              },
+              {
+                "calificacion": 3.8,
+                "porcentaje": 40
+              },
+              {
+                "calificacion": 4.2,
+                "porcentaje": 30
+              }
+            ]
+          },
+          {
+            "id": 202,
+            "nombre": "Ana Rodríguez",
+            "correo": "ana@eafit.com",
+            "cc": "22334455",
+            "progreso": 75,
+            "notas": [
+              {
+                "calificacion": 4.0,
+                "porcentaje": 30
+              },
+              {
+                "calificacion": 3.6,
+                "porcentaje": 40
+              },
+              {
+                "calificacion": 4.1,
+                "porcentaje": 30
+              }
+            ]
+          },
+          {
+            "id": 203,
+            "nombre": "Pedro Martínez",
+            "correo": "pedro@eafit.com",
+            "cc": "33445566",
+            "progreso": 60,
+            "notas": [
+              {
+                "calificacion": 3.2,
+                "porcentaje": 30
+              },
+              {
+                "calificacion": 3.7,
+                "porcentaje": 40
+              },
+              {
+                "calificacion": 3.9,
+                "porcentaje": 30
+              }
+            ]
+          },
+          {
+            "id": 204,
+            "nombre": "Laura Torres",
+            "correo": "laura@eafit.com",
+            "cc": "44556677",
+            "progreso": 85,
+            "notas": [
+              {
+                "calificacion": 4.8,
+                "porcentaje": 30
+              },
+              {
+                "calificacion": 4.2,
+                "porcentaje": 40
+              },
+              {
+                "calificacion": 4.0,
+                "porcentaje": 30
+              }
+            ]
+          },
+          {
+            "id": 205,
+            "nombre": "Sofía Ramírez",
+            "correo": "sofia@eafit.com",
+            "cc": "55667788",
+            "progreso": 90,
+            "notas": [
+              {
+                "calificacion": 4.9,
+                "porcentaje": 30
+              },
+              {
+                "calificacion": 4.7,
+                "porcentaje": 40
+              },
+              {
+                "calificacion": 4.6,
+                "porcentaje": 30
+              }
+            ]
+          },
+          {
+            "id": 206,
+            "nombre": "Fernando Gutiérrez",
+            "correo": "fernando@eafit.com",
+            "cc": "66778899",
+            "progreso": 55,
+            "notas": [
+              {
+                "calificacion": 3.1,
+                "porcentaje": 30
+              },
+              {
+                "calificacion": 3.4,
+                "porcentaje": 40
+              },
+              {
+                "calificacion": 3.6,
+                "porcentaje": 30
+              }
+            ]
+          },
+          {
+            "id": 207,
+            "nombre": "Paula Mejía",
+            "correo": "paula@eafit.com",
+            "cc": "77889900",
+            "progreso": 78,
+            "notas": [
+              {
+                "calificacion": 4.3,
+                "porcentaje": 30
+              },
+              {
+                "calificacion": 4.1,
+                "porcentaje": 40
+              },
+              {
+                "calificacion": 3.9,
+                "porcentaje": 30
+              }
+            ]
+          },
+          {
+            "id": 208,
+            "nombre": "Ricardo Castro",
+            "correo": "ricardo@eafit.com",
+            "cc": "88990011",
+            "progreso": 68,
+            "notas": [
+              {
+                "calificacion": 3.6,
+                "porcentaje": 30
+              },
+              {
+                "calificacion": 3.8,
+                "porcentaje": 40
+              },
+              {
+                "calificacion": 4.0,
+                "porcentaje": 30
+              }
+            ]
+          },
+          {
+            "id": 209,
+            "nombre": "Elena Vargas",
+            "correo": "elena@eafit.com",
+            "cc": "99001122",
+            "progreso": 82,
+            "notas": [
+              {
+                "calificacion": 4.5,
+                "porcentaje": 30
+              },
+              {
+                "calificacion": 4.2,
+                "porcentaje": 40
+              },
+              {
+                "calificacion": 4.3,
+                "porcentaje": 30
+              }
+            ]
+          },
+          {
+            "id": 210,
+            "nombre": "Jorge Herrera",
+            "correo": "jorge@eafit.com",
+            "cc": "11223344",
+            "progreso": 74,
+            "notas": [
+              {
+                "calificacion": 3.9,
+                "porcentaje": 30
+              },
+              {
+                "calificacion": 3.7,
+                "porcentaje": 40
+              },
+              {
+                "calificacion": 4.1,
+                "porcentaje": 30
+              }
             ]
           }
         ],

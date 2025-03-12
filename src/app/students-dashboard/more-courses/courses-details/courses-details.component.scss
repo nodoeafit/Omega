@@ -1,4 +1,4 @@
-// @import "../../../styles.scss";
+// @import "../../../../styles.scss";
 
 * {
   margin: 10px;
@@ -32,7 +32,7 @@
 
 h1 {
   // font-family: $titleFont;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bolder;
 }
 
@@ -53,9 +53,9 @@ h1 {
   width: 70%;
 }
 
-.course-details-img:hover {
-  // @include grow();
-}
+// .course-details-img:hover {
+//   @include grow();
+// }
 
 // course info
 .course-details-name {

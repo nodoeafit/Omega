@@ -1,9 +1,22 @@
+<div>
+  <button [routerLink]="['/admin/adduser']"> hola </button>
+</div>
 
-<div class="container" *ngFor="let user of users">
-    <img src="https://img.icons8.com/?size=100&id=AjTPlMclWxjF&format=png&color=000000" alt="Default User">
-    <p>{{ user['first_name'] }} {{ user['last_name'] }}</p>
+<section #contentCards class="content-cards">
+  <div class="card-courses" *ngFor="let user of users">
+    <div class="title">
+      <div class="icon">
+        <img src="https://img.icons8.com/?size=100&id=AjTPlMclWxjF&format=png&color=000000" alt="Default User">
+      </div>
+      <h3>{{ user['first_name'] }} {{ user['last_name'] }}</h3>
+    </div>
     <p>{{ user.email }}</p>
     <p>Grupo</p>
-    <button [routerLink]="['/admin/user-detail', user.id]">Ver Perfil</button>
-    <button [routerLink]="['/admin/user-edit', user.id]">Editar Perfil</button>
-</div>
+    <div class="buttons-container">
+      <button class="details-button" [routerLink]="['/admin/user-detail', user.id]">Ver Perfil</button>
+      <button  class="buy-button" [routerLink]="['/admin/user-edit', user.id]">Editar Perfil</button>
+    </div>
+
+  </div>
+</section>
+

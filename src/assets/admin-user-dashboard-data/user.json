@@ -3,7 +3,7 @@
       "id": 1,
       "first_name": "Karen",
       "last_name": "Idarraga",
-      "user_type": "admin",
+      "user_type": "Admin",
       "email": "karenie@hotmail.com",
       "password": "password123"
     },
@@ -30,5 +30,30 @@
       "user_type": "Mentor",
       "email": "MariaLopez2@gmail.com",
       "password": "password923"
+    },
+    {
+      "id": 5,
+      "first_name": "Pepito",
+      "last_name": "Lopez",
+      "user_type": "Estudiante",
+      "email": "Pepito@gmail.com",
+      "password": "Pepito123"
+    },
+    {
+      "id": 6,
+      "first_name": "Laura",
+      "last_name": "Velez",
+      "user_type": "Mentor",
+      "email": "lauravelez@gmail.com",
+      "password": "Mentor123"
+    },
+    {
+      "id": 7,
+      "first_name": "Admin",
+      "last_name": "Admin",
+      "user_type": "Admin",
+      "email": "Admin@gmail.com",
+      "password": "Admin123"
     }
+    
   ]

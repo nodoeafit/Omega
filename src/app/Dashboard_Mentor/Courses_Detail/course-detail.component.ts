@@ -13,15 +13,19 @@ import { CourseDetailService } from '../../services/course_detail.service';
   styleUrl: './course-detail.component.scss',
 })
 export class CourseDetailComponent implements OnInit {
-  courseDetail: any = {};
+
+  NombreCurso: any;
+  Completado: any;
+  Estudiante: any;
   modalOpen: boolean = false;
-  modalOpenNotas: boolean = false;
+  ModalOpenNotas: boolean = false;
   selectedStudent: any = null;
+
 
   constructor(
     private route: ActivatedRoute,
     private courseDetailService: CourseDetailService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.route.params.subscribe({
@@ -29,83 +33,74 @@ export class CourseDetailComponent implements OnInit {
         const mentorId = Number(params['mentorId']);
         const courseId = Number(params['id']);
 
-        console.log(
-          'este es el mentor id ',
-          mentorId,
-          ' y este es el curso id ',
-          courseId
-        );
-
-        //   if (!isNaN(mentorId) && !isNaN(courseId)) {
-        //     this.courseDetailService.getCourseById(mentorId, courseId).subscribe({
-        //       next: data => {
-        //         this.courseDetail = data;
-        //       },
-        //       error: error => {
-        //         console.error("Error al obtener los detalles del curso:", error);
-        //       }
-        //     });
-        //   }else {
-        //     console.error("ID de curso o mentor no válido.");
-        //   }
-        fetch('assets/courses.json')
-          .then((res) => res.json())
-          .then((data) => {
-            const mentor = data.find(
-              (mentor: any) => mentor.mentorId === mentorId
-            );
-            console.log(mentor);
-
-            if (mentor) {
-              const curso = mentor.cursos.find(
-                (curso: any) => curso.id === courseId
-              );
-
-              if (curso) {
-                console.log('Curso encontrado:', curso);
-                this.courseDetail = curso;
-              } else {
-                console.error('Curso no encontrado para el mentor');
-              }
-            } else {
-              console.error('Mentor no encontrado');
+        if (!isNaN(mentorId) && !isNaN(courseId)) {
+          this.courseDetailService.obtenerDetallesCurso(mentorId, courseId).subscribe({
+            next: data => {
+              this.NombreCurso = data.curso.nombre;
+              this.Completado = data.curso.completado
+              this.Estudiante = data.curso.estudiantes;
+            },
+            error: error => {
+              console.error("Error al obtener los detalles del curso:", error);
             }
           });
+        }
       },
       error: (error) => {
         console.error('Error al obtener los parámetros de la ruta:', error);
-      },
+      }
     });
   }
 
+  calcularNotaFinal(estudiante: any): number {
+    const notas = estudiante.notas;
+    if (!notas || notas.length === 0) return 0;
+
+    let total = 0;
+    let totalPorcentaje = 0;
+
+    notas.forEach((nota: any) => {
+      total += nota.calificacion * (nota.porcentaje / 100);
+      totalPorcentaje += nota.porcentaje;
+    });
+
+    return totalPorcentaje > 0 ? total : 0;
+  }
+
+  toggleNotas(estudiante: any) {
+    estudiante.verNotas = !estudiante.verNotas;
+  }
+
   openEditModal(estudiante: any) {
-    this.selectedStudent = JSON.parse(JSON.stringify(estudiante)); // Clonamos el objeto para no modificar directamente
+    this.selectedStudent = JSON.parse(JSON.stringify(estudiante));
     this.modalOpen = true;
+  }
+
+  openNotasModal(estudiante: any) {
+    this.selectedStudent = JSON.parse(JSON.stringify(estudiante));
+    this.ModalOpenNotas = true;
+  }
+
+  openModal() {
+    this.modalOpen = true;
+    this.ModalOpenNotas = true;
   }
 
   closeModal() {
     this.modalOpen = false;
+    this.ModalOpenNotas = false;
     this.selectedStudent = null;
   }
 
   saveChanges() {
     if (this.selectedStudent) {
-      const index = this.courseDetail.estudiantes.findIndex(
-        (e: any) => e.id === this.selectedStudent.id
-      );
+      const index = this.Estudiante.findIndex((e: any) => e.id === this.selectedStudent.id);
       if (index !== -1) {
-        this.courseDetail.estudiantes[index] = { ...this.selectedStudent };
+        this.Estudiante[index] = { ...this.selectedStudent };
       }
       this.closeModal();
     }
   }
 
-  openEditModalNotes(estudiante: any) {
-    this.selectedStudent = JSON.parse(JSON.stringify(estudiante)); // Clonamos el objeto para no modificar directamente
-    this.modalOpenNotas = true;
-  }
 
-  closeModalNotes() {
-    this.modalOpenNotas = false;
-  }
 }

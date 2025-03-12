@@ -1,0 +1,183 @@
+.table {
+  --bs-table-hover-bg: transparent !important;
+  background: none !important;
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+
+  th {
+    background: #0076fc;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-bottom: none;
+  } 
+
+  td {
+    padding: 10px;
+    text-align: center;
+    transition: all 0.2s;
+    vertical-align: middle;
+    position: relative;
+
+    &:hover {
+      background: #bfebfd;
+    }
+  }
+
+  .clickable {
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      color: #00bcf0;
+    }
+  }
+}
+
+.custom-progress-bar {
+  background-color: #00d5e4; 
+  color: #000000; 
+}
+
+
+.badge-custom {
+  background-color:  #00bcf0 ;
+  color: #000000;
+  border-radius: 30px;
+  font-weight: normal;
+}
+
+.notas-list {
+  margin-top: 8px;
+  padding: 5px;
+  background: rgba(0, 123, 255, 0.05);
+  border-radius: 5px;
+}
+
+.ver-notas-btn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #00bcf0;
+  color: white;
+  border: none;
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.student-table td:hover .ver-notas-btn {
+  display: block;
+}
+
+.custom-edit-button {
+  background-color: #00bcf0; 
+  color: #000000;
+  border: none; 
+  border-radius: 30px; 
+  padding: 5px 12px; 
+  font-size: 12px; 
+}
+
+.modal.fade {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.modal-header,
+.modal-footer {
+  border: none !important;
+}
+
+.modal-footer .btn {
+  padding: 5px 12px;
+  font-size: 12px;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-footer .btn-success {
+  background-color: #00aa43;
+  border-color: #00aa43;
+}
+
+.modal-footer .btn-secondary {
+  background-color: #ff001a;
+  border-color: #ff001a;
+}
+
+.porcentaje-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .porcentaje-input {
+    max-width: 100px;
+    padding-right: 20px; // Espacio para el %
+    text-align: right; // Texto a la derecha
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+
+  .percentage-symbol {
+    position: absolute;
+    right: 29px;
+    top: 20%;
+    font-weight: bold;
+    color: #333;
+    pointer-events: none; // Evita interferencia con el input
+  }
+}
+
+.modal-edit {
+  td {
+    vertical-align: middle;
+    align-items: center;
+    text-align: center;
+
+    input {
+      width: 100%;
+      border: none;
+      text-align: center;
+      background-color: transparent;
+      outline: none; 
+    }
+    .porcentaje-input {
+      padding-right: 15px; // Espacio para el porcentaje
+      position: relative;
+      text-align: center;
+
+    }
+
+    &:last-child { // Para la columna del porcentaje
+      display: flex;
+      align-items: center;
+
+      .percentage-symbol {
+        font-weight: bold;
+        color: #333; 
+      }
+    }
+  }
+}

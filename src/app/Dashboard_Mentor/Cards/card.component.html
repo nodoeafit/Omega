@@ -1,17 +1,18 @@
- <div class="course-card" >
-    <div class="course-header">
-      <svg width="50" height="50" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="40" stroke="#ddd" stroke-width="10" fill="none"/>
-        <circle cx="50" cy="50" r="40" stroke="#4caf50" stroke-width="10" fill="none"
-          stroke-dasharray="251.2" 
-          [attr.stroke-dashoffset]="251.2 - (course.completado / 100) * 251.2" 
-          stroke-linecap="round"
-          transform="rotate(-90 50 50)"/>
-        <text x="50" y="55" font-size="18" text-anchor="middle" fill="#000">{{ course.completado }}%</text>
-        <text x="50" y="67" font-size="12" text-anchor="middle" fill="#777">Completado</text>
-      </svg>
-    </div>
-    <h3>{{ course.nombre }}</h3>
-    <button class="view-course" (click)="goToCourse()">Ver Curso</button>
+<div class="course-card">
+  <div class="course-header">
+    <svg width="50" height="50" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="40" stroke="#ddd" stroke-width="10" fill="none" />
+      <circle cx="50" cy="50" r="40" stroke="#4caf50" stroke-width="10" fill="none" stroke-dasharray="251.2"
+        [attr.stroke-dashoffset]="251.2 - (course.completado / 100) * 251.2" stroke-linecap="round"
+        transform="rotate(-90 50 50)" />
+      <text x="50" y="55" font-size="18" text-anchor="middle" fill="#000">{{ course.completado }}%</text>
+      <text x="50" y="67" font-size="12" text-anchor="middle" fill="#777">Completado</text>
+    </svg>
   </div>
-  
+  <h3>{{ course.nombre }}</h3>
+  <button class="button" (click)="goToCourse()">
+    <span class="shadow"></span>
+    <span class="edge"></span>
+    <span class="front"> Ver Curso </span>
+  </button>
+</div>

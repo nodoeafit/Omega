@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit {
   constructor(
     private themesService: ThemesService,
     private renderer: Renderer2,
-  ) {}
+  ) { }
 
   ngOnInit(): void {
 
@@ -28,19 +28,19 @@ export class NavbarComponent implements OnInit {
       const light = menuNav.querySelector(".lightHome");
       const dark = menuNav.querySelector(".darkHome");
 
-      console.log(light);
-      console.log(dark);
+      //console.log(light);
+      //console.log(dark);
 
       this.themesService.isDarkMode$.subscribe((isDarkMode) => {
         this.isDarkMode = isDarkMode;
-        console.log(this.isDarkMode);
+        //console.log(this.isDarkMode);
         if (this.isDarkMode) {
           this.renderer.addClass(document.body, 'dark-theme');
           this.renderer.removeClass(document.body, 'light-theme');
           this.renderer.removeClass(dark, "darkHome");
           this.renderer.addClass(dark, "darkOpenHome");
           this.renderer.addClass(light, "lightCloseHome")
-        }else{
+        } else {
           this.renderer.addClass(document.body, 'light-theme');
           this.renderer.removeClass(document.body, 'dark-theme');
           this.renderer.removeClass(light, "lightCloseHome");

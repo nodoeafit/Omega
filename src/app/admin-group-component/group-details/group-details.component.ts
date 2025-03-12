@@ -1,26 +1,35 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { AdminGroupServiceService } from '../../services/admin-group-services/admin-group-service.service';
 import { CommonModule } from '@angular/common';
+import { Location } from '@angular/common'; //
+
 
 @Component({
   selector: 'app-group-details',
   imports: [CommonModule],
-  templateUrl: './group-details.component.html',
-  styleUrl: './group-details.component.scss'
+  templateUrl: './group-details.component.html'
 })
 export class GroupDetailsComponent implements OnInit {
-
   groupId!: number;
-  group: any; // Replace with proper typing if needed
+  group: any;
 
-  groups = [ /* Your groups JSON data here */ ];
-
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private groupService: AdminGroupServiceService,
+    private location : Location
+  ) {}
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.groupId = Number(params.get('id'));
-      this.group = this.groups.find(g => g.id === this.groupId);
+      this.groupService.getGroupById(this.groupId).subscribe(data => {
+        this.group = data;
+      });
     });
+  }
+
+  goBack(): void {
+    this.location.back(); 
   }
 }

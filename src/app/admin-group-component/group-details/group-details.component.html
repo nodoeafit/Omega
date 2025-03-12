@@ -5,8 +5,8 @@
 <h3>Students</h3>
 <ul>
   <li *ngFor="let student of group?.students">
-    {{ student.first_name }} {{ student.last_name }} - {{ student.email }}
+    {{ student.first_name }} {{ student.last_name }}
   </li>
 </ul>
 
-<button routerLink="/groups">Back</button>
+<button  (click)="goBack()">Back</button>

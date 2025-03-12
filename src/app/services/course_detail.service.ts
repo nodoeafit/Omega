@@ -1,24 +1,31 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CourseDetailService {
-  private apiUrl = '/api/courses';
+  private Urlcursos = '/assets/courses.json';
+
   constructor(private http: HttpClient) {}
 
-  getCourseById(mentorId: number, courseId: number): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/${mentorId}/course/${courseId}`);
+  obtenerDetallesCurso(mentorId: number, courseId: number): Observable<any> {
+    return this.http.get<any[]>(this.Urlcursos).pipe(
+      map((cursos) => this.filtrarCursoPorMentorYIdCurso(cursos, mentorId, courseId))
+    )
   }
 
-  // getCourseById(courseId: number, mentorId: number): Observable<any> {
-  //   return this.http.get<any>(`${this.apiUrl}/${courseId}?mentorId=${mentorId}`);
-  // }
-
-
-  // getCourseById(courseId: number): Observable<any> {
-  //   return this.http.get<any>(`${this.apiUrl}/${courseId}`);
-  // }
+  private filtrarCursoPorMentorYIdCurso(cursos: any[], mentorId: number, courseId: number): any {
+    const mentor = cursos.find((curso) => curso.id === mentorId);
+    if (mentor) {
+      const curso = mentor.cursos.find((curso: any) => curso.id === courseId);
+      if (curso) {
+        return { 
+          curso
+        }
+      }
+    }
+    return null
+  }
 }
