@@ -1,0 +1,10 @@
+<h2>Groups</h2>
+<ul>
+  <li *ngFor="let group of groups">
+    <strong>{{ group.name }}</strong> - Mentor: {{ group.mentor.first_name }} {{ group.mentor.last_name }}
+    <button (click)="getdetails(group.id)">Detalle</button>
+    <button (click)="deleteGroup(group.id)">Eliminar</button>
+  </li>
+</ul>
+
+

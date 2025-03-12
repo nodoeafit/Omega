@@ -1,0 +1,12 @@
+<h2>Group Details</h2>
+<p><strong>Name:</strong> {{ group?.name }}</p>
+<p><strong>Mentor:</strong> {{ group?.mentor.first_name }} {{ group?.mentor.last_name }}</p>
+
+<h3>Students</h3>
+<ul>
+  <li *ngFor="let student of group?.students">
+    {{ student.first_name }} {{ student.last_name }} - {{ student.email }}
+  </li>
+</ul>
+
+<button routerLink="/groups">Back</button>

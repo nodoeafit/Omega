@@ -1,0 +1,169 @@
+[
+    {
+      "id": 1,
+      "name": "Omega",
+      "mentor": {
+        "id": 1,
+        "first_name": "Karen",
+        "last_name": "Idarraga",
+        "user_type": "Mentor",
+        "email": "karenie@hotmail.com",
+        "password": "password123"
+      },
+      "students": [
+        {
+          "id": 2,
+          "first_name": "Carlos",
+          "last_name": "Garcia",
+          "user_type": "Estudiante",
+          "email": "carlosga1@gmail.com",
+          "password": "password456"
+        },
+        {
+          "id": 3,
+          "first_name": "Maria",
+          "last_name": "Lopez",
+          "user_type": "Estudiante",
+          "email": "MariaLopez2@gmail.com",
+          "password": "password923"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Alpha",
+      "mentor": {
+        "id": 4,
+        "first_name": "Luis",
+        "last_name": "Martinez",
+        "user_type": "Mentor",
+        "email": "luism@hotmail.com",
+        "password": "mentorpass1"
+      },
+      "students": [
+        {
+          "id": 5,
+          "first_name": "Sofia",
+          "last_name": "Gomez",
+          "user_type": "Estudiante",
+          "email": "sofia.gomez@gmail.com",
+          "password": "sofiapass"
+        },
+        {
+          "id": 6,
+          "first_name": "Daniel",
+          "last_name": "Perez",
+          "user_type": "Estudiante",
+          "email": "danielperez@gmail.com",
+          "password": "danielpass"
+        },
+        {
+          "id": 7,
+          "first_name": "Valentina",
+          "last_name": "Torres",
+          "user_type": "Estudiante",
+          "email": "valentinat@gmail.com",
+          "password": "valenpass"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Beta",
+      "mentor": {
+        "id": 8,
+        "first_name": "Andrea",
+        "last_name": "Rodriguez",
+        "user_type": "Mentor",
+        "email": "andrear@gmail.com",
+        "password": "andrea123"
+      },
+      "students": [
+        {
+          "id": 9,
+          "first_name": "Miguel",
+          "last_name": "Ramirez",
+          "user_type": "Estudiante",
+          "email": "miguelramirez@gmail.com",
+          "password": "miguelpass"
+        },
+        {
+          "id": 10,
+          "first_name": "Isabella",
+          "last_name": "Fernandez",
+          "user_type": "Estudiante",
+          "email": "isabella.f@gmail.com",
+          "password": "isabellapass"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Delta",
+      "mentor": {
+        "id": 11,
+        "first_name": "Carlos",
+        "last_name": "Gonzalez",
+        "user_type": "Mentor",
+        "email": "carlosg@hotmail.com",
+        "password": "carlosgpass"
+      },
+      "students": [
+        {
+          "id": 12,
+          "first_name": "Juan",
+          "last_name": "Mendoza",
+          "user_type": "Estudiante",
+          "email": "juan.mendoza@gmail.com",
+          "password": "juanmpass"
+        },
+        {
+          "id": 13,
+          "first_name": "Camila",
+          "last_name": "Suarez",
+          "user_type": "Estudiante",
+          "email": "camilas@gmail.com",
+          "password": "camilapass"
+        },
+        {
+          "id": 14,
+          "first_name": "Esteban",
+          "last_name": "Morales",
+          "user_type": "Estudiante",
+          "email": "estebanm@gmail.com",
+          "password": "estebanpass"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Gamma",
+      "mentor": {
+        "id": 15,
+        "first_name": "Diana",
+        "last_name": "Vargas",
+        "user_type": "Mentor",
+        "email": "diana.vargas@hotmail.com",
+        "password": "dianapass"
+      },
+      "students": [
+        {
+          "id": 16,
+          "first_name": "Fernando",
+          "last_name": "Castillo",
+          "user_type": "Estudiante",
+          "email": "fernandoc@gmail.com",
+          "password": "fernandopass"
+        },
+        {
+          "id": 17,
+          "first_name": "Lucia",
+          "last_name": "Ortega",
+          "user_type": "Estudiante",
+          "email": "luciao@gmail.com",
+          "password": "luciapass"
+        }
+      ]
+    }
+  ]
+  

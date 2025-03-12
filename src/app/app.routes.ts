@@ -13,6 +13,15 @@ import { MainLayoutComponent } from './Pages/main-layout/main-layout.component';
 
 import { CourseContentComponent } from './students-dashboard/course-content/course-content.component';
 
+import { ContainerComponent } from './admin-components/container/container.component';
+import { UserFormComponent } from './admin-components/user-form/user-form.component';
+import { SearchUserDashboardComponent } from './search-user-dashboard/search-user-dashboard.component';
+import { AdminComponent } from './admin-dashboard/admin-dashboard.component';
+import { UserDetailComponent } from './admin-components/user-detail/user-detail.component.js';
+import { EditUserComponent } from './admin-components/edit-user/edit-user.component.js';
+import { AdminGroupComponentComponent } from './admin-group-component/admin-group-component.component';
+import { GroupDetailsComponent } from './admin-group-component/group-details/group-details.component.js';
+
 export const routes: Routes = [
   //RUTAS LANDING OK
   {
@@ -177,6 +186,46 @@ export const routes: Routes = [
             (m) => m.CommunityComponent
           ),
       },
+      {
+        path: 'admin',
+        data: { renderMode: 'client' },
+        component: AdminComponent,
+      },
+      {
+        path: 'admin/user',
+        data: { renderMode: 'client' },
+        component: SearchUserDashboardComponent,
+      },
+    
+      {
+        path: 'admin/adduser',
+        data: { renderMode: 'client' },
+        component: UserFormComponent,
+      },
+    
+      {
+        path: 'admin/user-detail/:id',
+        data: { renderMode: 'client' },
+        component: UserDetailComponent,
+      },
+    
+      {
+        path: 'admin/user-edit/:id',
+        data: { renderMode: 'client' },
+        component: EditUserComponent,
+      },
+      {
+        path: 'admin/groups',
+        data: { renderMode: 'client' },
+        component: AdminGroupComponentComponent,
+      },
+      {
+        path: 'admin/groups/id',
+        data: { renderMode: 'client' },
+        component: GroupDetailsComponent,
+      },
     ],
   },
+  
+
 ];
