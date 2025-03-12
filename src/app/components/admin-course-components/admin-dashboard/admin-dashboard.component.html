@@ -1,5 +1,5 @@
 <div class="dashboard-container">
-  <h2>Bienvenido al Dashboard del Administrador</h2>
+  <h2>Course Dashboard</h2>
 
   <!-- Barra de búsqueda y botones -->
   <section class="search-bar-container">
@@ -40,9 +40,7 @@
               <td colspan="3">
                 <div class="course-info">
                   <p><strong>Modalidad:</strong> {{ course.modality }}</p>
-                  <p *ngIf="course.certification !== undefined">
-                    <strong>Certificación:</strong> {{ course.certification ? 'Sí' : 'No' }}
-                  </p>
+                  <p *ngIf="course.certification"><strong>Certificación:</strong> {{ course.certification }}</p>
                   <p *ngIf="course.duration"><strong>Duración:</strong> {{ course.duration }}</p>
                   <p *ngIf="course.description"><strong>Descripción:</strong> {{ course.description }}</p>
                   <p *ngIf="course.price"><strong>Valor:</strong> ${{ course.price }}</p>

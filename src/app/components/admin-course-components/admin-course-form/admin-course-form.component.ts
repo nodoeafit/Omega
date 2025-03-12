@@ -22,7 +22,6 @@ export class AdminCourseFormComponent implements OnInit {
   courseForm!: FormGroup;
   isEditMode = false;
   courseId: number | null = null;
-
   showConfirmation = false;
   confirmationMessage = '';
 
@@ -36,7 +35,7 @@ export class AdminCourseFormComponent implements OnInit {
 
   ngOnInit() {
     this.initializeForm();
-
+  
     this.route.paramMap
       .pipe(
         switchMap(params => {
@@ -51,48 +50,64 @@ export class AdminCourseFormComponent implements OnInit {
       )
       .subscribe(course => {
         if (course) {
-          this.courseForm.patchValue(course);
+          const formattedCourse = {
+            ...course,
+            certification: course.certification === 'Certificación virtual' ? true : false
+          };
+          this.courseForm.patchValue(formattedCourse);
         }
       });
   }
+  
+  
 
   private initializeForm() {
     this.courseForm = this.fb.group({
       id: [0],
       title: ['', Validators.required], 
       modality: ['Presencial', Validators.required],
-      certification: [false], 
+      certification: ['No certificable', Validators.required], 
       duration: ['', Validators.required],
       description: ['', [Validators.required, Validators.minLength(10)]],
       price: ['', [Validators.required, Validators.pattern('^[0-9]+(\\.[0-9]{1,2})?$')]]
     });
   }
+  
 
   saveCourse() {
     if (this.courseForm.valid) {
       const formData = this.courseForm.value;
-      formData.certification = formData.certification ? 'Certificación virtual' : 'No certificable';
+  
+      formData.certification = formData.certification === 'Certificación virtual' 
+        ? 'Certificación virtual' 
+        : 'No certificable';
+  
+      console.log('Valor guardado de certification:', formData.certification); 
   
       const courseOperation = this.isEditMode
-        ? this.courseService.updateCourse(formData)
-        : this.courseService.addCourse({ ...formData, id: Date.now() });
-  
-      courseOperation.subscribe({
-        next: () => {
-          const dialogRef = this.dialog.open(ConfirmationComponent, {
-            width: '400px',
-            data: { message: this.isEditMode ? 'Curso actualizado correctamente' : 'Curso creado correctamente' }
-          });
-  
-          dialogRef.afterClosed().subscribe(() => {
-            this.courseUpdated.emit(); 
-            this.router.navigate(['/admin-dashboard']);
-          });
-        },
-        error: (err: any) => console.error(`Error al ${this.isEditMode ? 'actualizar' : 'agregar'} el curso:`, err)
-      });
-    }
+      ? this.courseService.updateCourse(formData)
+      : this.courseService.addCourse({ ...formData, id: Date.now() });
+
+    courseOperation.subscribe({
+      next: () => {
+        const dialogRef = this.dialog.open(ConfirmationComponent, {
+          width: '400px',
+          data: { message: this.isEditMode ? 'Curso actualizado correctamente' : 'Curso creado correctamente' }
+        });
+
+        dialogRef.afterClosed().subscribe(() => {
+          this.courseUpdated.emit();
+          this.router.navigate(['/admin-dashboard']);
+        });
+      },
+      error: (err: any) => console.error(`Error al ${this.isEditMode ? 'actualizar' : 'agregar'} el curso:`, err)
+    });
   }
+}
+  
+  
+  
+  
 
   showModal(message: string) {
     this.confirmationMessage = message;

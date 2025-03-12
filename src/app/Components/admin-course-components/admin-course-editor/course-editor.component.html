@@ -2,16 +2,18 @@
   <!-- Sección de edición -->
   <div class="editor-section">
     <h2 *ngIf="course" class="course-title">{{ course.course }}</h2>
+    <div class="editor-buttons">
     <button class="add-unit-btn" (click)="addUnit()">+ Agregar Unidad</button>
-    <button (click)="undoLastChange()" mat-button color="primary" [disabled]="!(courseEditorService.hasUndo())">
+    <button class="undo-action-btn" (click)="undoLastChange()" mat-button color="primary" [disabled]="!(courseEditorService.hasUndo())">
       Deshacer acción
     </button>
-    <button (click)="confirmRestoreCourse()" mat-button color="warn">
+    <button class="restart-btn" (click)="confirmRestoreCourse()" mat-button color="warn">
       Restaurar 
     </button>
-    <button mat-button color="primary" (click)="saveCourseAndExit()">
+    <button mat-button class="save-btn" color="primary" (click)="saveCourseAndExit()">
       Guardar y salir
     </button>
+  </div>
 
     <div *ngFor="let unit of course?.content; let i = index"
     #unitElement
@@ -76,7 +78,7 @@
       </div>
   </div>
 </div>
-          
+
  <!-- Área de eliminación -->
     <div cdkDropList 
     id="deleteContainer"
@@ -86,8 +88,5 @@
     (cdkDropListDropped)="deleteUnitOnDrop($event)">
     🗑️ Arrastra aquí para eliminar
     </div>
-
-
-
-</div>
   </div>
+</div>

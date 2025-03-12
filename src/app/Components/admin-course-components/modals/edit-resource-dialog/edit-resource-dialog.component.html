@@ -1,10 +1,12 @@
 <h2 mat-dialog-title class="modal-title">
-  {{ data.resource.ResourceName ? 'Editar recurso' : 'Agregar Recurso' }}
+  <h2 mat-dialog-title class="modal-title">
+    {{ isEditing ? 'Editar recurso' : 'Agregar Recurso' }}
+  </h2>
 </h2>
 
 <mat-dialog-content class="modal-content">
   <div class="modal-columns">
-    <!-- 📌 Columna Izquierda (Formulario) -->
+    <!-- Columna Izquierda (Formulario) -->
     <div class="modal-left">
       <div class="form-group">
         <mat-form-field appearance="fill" class="form-field">
@@ -32,10 +34,7 @@
           ></textarea>
         </mat-form-field>
       </div>
-    </div>
 
-    <!-- 📌 Columna Derecha (Drag & Drop + Vista Previa) -->
-    <div class="modal-right">
       <div
         class="drop-zone"
         [class.dragging]="isDragging"
@@ -49,6 +48,11 @@
         <input type="file" id="fileInput" hidden (change)="onFileSelected($event)">
       </div>
 
+    </div>
+
+    <!-- Columna Derecha -->
+    <div class="modal-right">
+      
       <div *ngIf="data.resource.Link || data.resource.Embed" class="preview-container">
         <p class="preview-title"><strong>Vista previa:</strong></p>
         <img *ngIf="data.resource.Link?.startsWith('data:image')" [src]="data.resource.Link" class="preview-image">

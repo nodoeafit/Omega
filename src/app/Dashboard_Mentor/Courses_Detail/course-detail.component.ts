@@ -20,6 +20,7 @@ export class CourseDetailComponent implements OnInit {
   modalOpen: boolean = false;
   ModalOpenNotas: boolean = false;
   selectedStudent: any = null;
+courseDetail: any;
 
 
   constructor(

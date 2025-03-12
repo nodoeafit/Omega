@@ -28,14 +28,17 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 export class EditResourceDialogComponent {
   isDragging = false;
   sanitizedEmbed: SafeHtml = '';
+  isEditing: boolean;
 
   constructor(
     public dialogRef: MatDialogRef<EditResourceDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: { resource: Resource },
+    @Inject(MAT_DIALOG_DATA)  public data: { resource: Resource, isEditing: boolean },
     private sanitizer: DomSanitizer
   ) {
+    this.isEditing = data.isEditing; 
     this.updateSanitizedEmbed();
   }
+
 
   save() {
     this.dialogRef.close(this.data.resource);
@@ -55,13 +58,11 @@ export class EditResourceDialogComponent {
     this.isDragging = false;
   
     if (event.dataTransfer) {
-      // 🔹 Caso 1: Archivos arrastrados
       if (event.dataTransfer.files.length > 0) {
         this.handleFile(event.dataTransfer.files[0]);
         return;
       }
   
-      // 🔹 Caso 2: Enlace arrastrado
       const draggedText = event.dataTransfer.getData('text/plain');
       if (draggedText.startsWith('http')) {
         this.data.resource.Link = draggedText;

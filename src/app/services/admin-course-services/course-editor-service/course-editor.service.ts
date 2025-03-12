@@ -36,22 +36,20 @@ export class CourseEditorService {
 }
 
 
-moveUnit(previousIndex: number, newIndex: number): void {
-  if (previousIndex === newIndex) return;
-
-  this.saveStateForUndo();  
-
+moveUnit(previousIndex: number, currentIndex: number) {
   const currentCourse = this.courseSubject.value;
-  if (!currentCourse) return;
+  if (!currentCourse || previousIndex < 0 || currentIndex < 0 || previousIndex >= currentCourse.content.length || currentIndex >= currentCourse.content.length) {
+    return;
+  }
 
   const updatedContent = [...currentCourse.content];
-  const [movedUnit] = updatedContent.splice(previousIndex, 1);
-  updatedContent.splice(newIndex, 0, movedUnit);
-
-  updatedContent.forEach((unit, index) => unit.unidad = index + 1);
+  const movedUnit = updatedContent.splice(previousIndex, 1)[0]; 
+  updatedContent.splice(currentIndex, 0, movedUnit); 
 
   this.courseSubject.next({ ...currentCourse, content: updatedContent });
+  this.saveCourseToLocal(); 
 }
+
 
 removeUnit(unitIndex: number) {
   const currentCourse = this.courseSubject.value;

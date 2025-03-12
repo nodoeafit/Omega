@@ -7,7 +7,7 @@ import { SearchService } from '../../../services/admin-course-services/search-se
 import { AdminCourseListComponent } from "../admin-course-list/admin-course-list.component";
 import { DeleteConfirmationComponent } from '../modals/delete-confirmation/delete-confirmation.component';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { Observable } from 'rxjs'; // Maneja los datos reactivos del servicio
+import { Observable } from 'rxjs'; 
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -30,6 +30,7 @@ export class AdminDashboardComponent {
     searchService: SearchService,
     router: Router,
     dialog: MatDialog
+    
   ) {
     this.searchService = searchService;
     this.router = router;
@@ -49,7 +50,7 @@ export class AdminDashboardComponent {
 
   deleteCourse(id: number) {
     const dialogRef = this.dialog.open(DeleteConfirmationComponent, {
-      width: '800px',
+      width: '400px',
       data: { itemName: `Curso ID: ${id}`, itemType: 'curso' }
     });
   

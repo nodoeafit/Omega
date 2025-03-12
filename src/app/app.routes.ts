@@ -14,11 +14,11 @@ import { MainLayoutComponent } from './Pages/main-layout/main-layout.component';
 import { CourseContentComponent } from './students-dashboard/course-content/course-content.component';
 import path from 'path';
 import { UserCardComponent } from './admin-components/user-card/user-card.component';
-import {AdminComponent} from "./admin-dashboard/admin-dashboard.component";
-import { UserFormComponent } from "./admin-components/user-form/user-form.component";
-import { UserDetailComponent } from "./admin-components/user-detail/user-detail.component";
-import { EditUserComponent } from "./admin-components/edit-user/edit-user.component";
-
+import { UserDetailComponent } from './admin-components/user-detail/user-detail.component';
+import { UserFormComponent } from './admin-components/user-form/user-form.component';
+import { EditUserComponent } from './admin-components/edit-user/edit-user.component';
+import { AdminComponent } from './admin-dashboard/admin-dashboard.component';
+import { HomeLayoutComponent } from './layout/home-layout/home-layout.component';
 export const routes: Routes = [
   //RUTAS LANDING OK
   {
@@ -52,7 +52,7 @@ export const routes: Routes = [
   {
     path: 'admin-dashboard',
     data: { renderMode: 'client' },
-    component: AdminLayoutComponent,
+    component: HomelayoutComponent,
     children: [
       {
         path: '',

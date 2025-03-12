@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    width: 40vw;
+    height: 5vh;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    border-radius: 8px;
+    
+    
+    background-color: palegoldenrod;
+
+    input {
+        top: 10px;
+        display: flex;
+        width: 90%;
+        background-color: transparent;
+        border: none;
+        margin-left: 5px;
+        font-size: 18px;
+        
+
+        &:hover, &:focus{
+            outline: none;
+        }
+
+    }
+
+    img {
+        position: absolute;
+        width: 5%;
+        aspect-ratio: 1;
+        right: 10px;
+        top: calc(5%);
+        cursor: pointer;
+
+    }
+  
+}

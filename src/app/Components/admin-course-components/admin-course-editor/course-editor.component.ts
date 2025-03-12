@@ -84,22 +84,43 @@ export class CourseEditorComponent implements OnInit {
   }
 
 
-  openEditModal(unit: Unit, resource?: Resource): void {
-    this.dialog.open(EditResourceDialogComponent, {
-      width: '80vw',    
-      maxWidth: '1200px', 
-      height: '90vh',   
-      maxHeight: '800px', 
-      data: { resource: { ResourceName: '', Link: '', Embed: '' } }
-    }).afterClosed().subscribe(result => {
-      if (result) {
-        const unitIndex = this.course?.content.indexOf(unit);
-        if (unitIndex !== undefined && unitIndex !== -1) {
-          this.addResource(unitIndex, result.ResourceName, result.Link, result.Embed);
-        }
+  openEditModal(unit: any, resource?: Resource) {
+    const isEditing = !!resource; // 🔹 Verifica si estamos editando
+    const newResource = resource ? { ...resource } : { ResourceName: '', Link: '', Embed: '' };
+
+    const previouslyExpandedUnits = new Set(this.expandedUnits);
+
+    const dialogRef = this.dialog.open(EditResourceDialogComponent, {
+      width: '80vw',
+      maxWidth: '1200px',
+      height: '90vh',
+      maxHeight: '800px',
+      data: { 
+        resource: newResource,
+        isEditing: isEditing  
       }
     });
+  
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        if (isEditing && resource) { 
+          Object.assign(resource, result);
+        } else { 
+          unit.contenido.push(result);
+
+          setTimeout(() => {
+            this.expandedUnits = previouslyExpandedUnits;
+            this.expandedUnits.add(this.course?.content.indexOf(unit) ?? -1);
+            this.scrollToResource(this.course?.content.indexOf(unit) ?? -1);
+          }, 200);
+        }
+      }
+      this.expandedUnits = previouslyExpandedUnits;
+      this.expandedUnits.add(this.course?.content.indexOf(unit) ?? -1);
+    });
   }
+  
+  
 
   dropResource(event: CdkDragDrop<Resource[]>, unitIndex: number) {
     if (!this.course) return;
@@ -167,7 +188,16 @@ export class CourseEditorComponent implements OnInit {
     };
 
     this.courseEditorService.addUnit(newUnit);
-    this.scrollToUnit(this.course.content.length - 1);
+    
+    setTimeout(() => {
+      if (this.course && this.course.content.length > 0) { 
+        const lastIndex = this.course.content.length - 1;
+        this.expandedUnits.add(lastIndex);
+        this.scrollToUnit(lastIndex);
+      } else {
+        console.warn("No se puede hacer scroll: El curso o su contenido no están definidos.");
+      }
+    }, 200);
   }
 
   addResource(unitIndex: number, resourceName: string, link: string, embed: string) {
