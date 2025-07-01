@@ -10,8 +10,20 @@
     <app-search-bar (search)="search($event)"></app-search-bar>
   </section>
 
+  <!-- Mensaje de error -->
+  <div *ngIf="errorMessage" class="error-message">
+    <p>{{ errorMessage }}</p>
+    <button (click)="clearError()" class="button btn-close">×</button>
+  </div>
+
+  <!-- Indicador de carga -->
+  <div *ngIf="loading$ | async" class="loading-container">
+    <div class="loading-spinner"></div>
+    <p>Cargando cursos...</p>
+  </div>
+
   <!-- Vista en Lista -->
-  <section *ngIf="!isGridView" class="course-list">
+  <section *ngIf="!isGridView && !(loading$ | async)" class="course-list">
     <ng-container *ngIf="filteredCourses$ | async as filteredCourses">
       <table *ngIf="filteredCourses.length > 0" class="course-table">
         <thead>
@@ -59,7 +71,14 @@
   </section>
 
   <!-- Vista en Tarjetas -->
-  <section *ngIf="isGridView" class="course-grid">
+  <section *ngIf="isGridView && !(loading$ | async)" class="course-grid">
     <app-admin-course-list [filteredCourses]="(filteredCourses$ | async) || []"></app-admin-course-list>
   </section>
+
+  <!-- Botón de recarga -->
+  <div *ngIf="!(loading$ | async)" class="refresh-container">
+    <button (click)="refreshData()" class="button btn-refresh">
+      🔄 Recargar datos
+    </button>
+  </div>
 </div>

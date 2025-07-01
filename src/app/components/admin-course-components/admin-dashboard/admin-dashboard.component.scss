@@ -60,6 +60,108 @@ $transition-speed: 0.3s;
   }
 }
 
+// Mensaje de error
+.error-message {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $danger-color;
+  font-size: 1rem;
+  padding: 15px;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: $border-radius;
+  margin-bottom: 20px;
+  animation: slideInDown 0.3s ease-out;
+
+  p {
+    margin: 0;
+    flex: 1;
+  }
+
+  .btn-close {
+    background: none;
+    border: none;
+    color: $danger-color;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 5px;
+    margin-left: 10px;
+
+    &:hover {
+      color: darken($danger-color, 20%);
+    }
+  }
+}
+
+// Contenedor de carga
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: white;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+
+  p {
+    margin-top: 15px;
+    color: $secondary-color;
+    font-size: 16px;
+  }
+}
+
+// Spinner de carga
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid $light-gray;
+  border-top: 4px solid $primary-color;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Contenedor de recarga
+.refresh-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  .btn-refresh {
+    background: $info-color;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: all $transition-speed;
+    font-size: 14px;
+
+    &:hover {
+      background: darken($info-color, 10%);
+      transform: translateY(-2px);
+    }
+  }
+}
+
 // Tabla de cursos
 .course-table {
   width: 100%;
@@ -131,18 +233,6 @@ button {
 }
 
 // Mensaje de error y sin resultados
-.error-message {
-  color: $danger-color;
-  font-size: 1rem;
-  padding: 10px;
-  background: #f8d7da;
-  border-left: 5px solid $danger-color;
-  border-radius: 5px;
-  text-align: center;
-  width: 100%;
-  max-width: 600px;
-}
-
 .no-results {
   font-size: 1rem;
   color: $secondary-color;

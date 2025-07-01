@@ -22,9 +22,10 @@ export class AdminDashboardComponent {
   private searchService: SearchService;
 
   filteredCourses$: Observable<Course[]>;
-
+  loading$: Observable<boolean>;
   isGridView = false;
   selectedCourseId: number | null = null;
+  errorMessage: string | null = null;
 
   constructor(
     searchService: SearchService,
@@ -34,14 +35,14 @@ export class AdminDashboardComponent {
     this.searchService = searchService;
     this.router = router;
     this.dialog = dialog;
-    this.filteredCourses$ = this.searchService.filteredCourses$; 
+    this.filteredCourses$ = this.searchService.filteredCourses$;
+    this.loading$ = this.searchService.loading$;
   }
 
   search(event: Event) {
     const term = (event.target as HTMLInputElement).value;
     this.searchService.setSearchTerm(term); 
   }
-
 
   navigateTo(path: string, id?: number) {
     this.router.navigate([path, id].filter(Boolean));
@@ -55,7 +56,8 @@ export class AdminDashboardComponent {
   
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.searchService.deleteCourse(id); 
+        this.searchService.deleteCourse(id);
+        this.errorMessage = null; // Limpiar mensajes de error previos
       }
     });
   }
@@ -78,5 +80,22 @@ export class AdminDashboardComponent {
 
   editCourseContent(id: number) {
     this.router.navigate(['admin-dashboard/courses/edit-content', id]);
+  }
+
+  // Método para manejar errores
+  handleError(error: any) {
+    console.error('Error in admin dashboard:', error);
+    this.errorMessage = 'Error al cargar los cursos. Por favor, inténtalo de nuevo.';
+  }
+
+  // Método para limpiar errores
+  clearError() {
+    this.errorMessage = null;
+  }
+
+  // Método para recargar datos
+  refreshData() {
+    this.clearError();
+    // El servicio se encargará de recargar los datos
   }
 }

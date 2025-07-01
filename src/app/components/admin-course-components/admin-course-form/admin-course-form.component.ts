@@ -60,7 +60,7 @@ export class AdminCourseFormComponent implements OnInit {
     this.courseForm = this.fb.group({
       id: [0],
       title: ['', Validators.required], 
-      modality: ['Presencial', Validators.required],
+      modality: ['PRESENCIAL', Validators.required],
       certification: [false], 
       duration: ['', Validators.required],
       description: ['', [Validators.required, Validators.minLength(10)]],
@@ -72,10 +72,15 @@ export class AdminCourseFormComponent implements OnInit {
     if (this.courseForm.valid) {
       const formData = this.courseForm.value;
       formData.certification = formData.certification ? 'Certificación virtual' : 'No certificable';
+      
+      // Remover el ID si estamos creando un nuevo curso
+      if (!this.isEditMode) {
+        delete formData.id;
+      }
   
       const courseOperation = this.isEditMode
         ? this.courseService.updateCourse(formData)
-        : this.courseService.addCourse({ ...formData, id: Date.now() });
+        : this.courseService.addCourse(formData);
   
       courseOperation.subscribe({
         next: () => {
@@ -89,7 +94,14 @@ export class AdminCourseFormComponent implements OnInit {
             this.router.navigate(['/admin-dashboard']);
           });
         },
-        error: (err: any) => console.error(`Error al ${this.isEditMode ? 'actualizar' : 'agregar'} el curso:`, err)
+        error: (err: any) => {
+          console.error(`Error al ${this.isEditMode ? 'actualizar' : 'agregar'} el curso:`, err);
+          // Mostrar mensaje de error al usuario
+          const dialogRef = this.dialog.open(ConfirmationComponent, {
+            width: '400px',
+            data: { message: `Error al ${this.isEditMode ? 'actualizar' : 'crear'} el curso. Por favor, inténtelo de nuevo.` }
+          });
+        }
       });
     }
   }

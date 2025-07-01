@@ -1,9 +1,10 @@
 export interface Courses {
-    id: number;
+    id?: number;
     title: string;
-    modality: 'Presencial' | 'Virtual';
+    imageUrl?: string;
+    modality: 'PRESENCIAL' | 'VIRTUAL';
     certification: string; 
-    duration:string;    
+    duration: string;    
     description: string;    
     price: number;
 }
